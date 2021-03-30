@@ -1,5 +1,5 @@
 const {Schema, model} = require('mongoose');
-//HELLO.
+//HELLO.WORDL
 const userSchema = new Schema ({
 
     name: String,
