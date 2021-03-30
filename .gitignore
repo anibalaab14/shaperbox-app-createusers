@@ -8,6 +8,9 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
+# dotenv environment variables file
+.env
+env
 
 # macOS
 .DS_Store
