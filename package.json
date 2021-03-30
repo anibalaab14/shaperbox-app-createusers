@@ -1,0 +1,17 @@
+{
+  "name": "app-createusers",
+  "version": "1.0.0",
+  "description": "createUsers form app ShaperBox",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "nodemon index.js"
+  },
+  "author": "alfaLabs",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.2"
+  }
+}
