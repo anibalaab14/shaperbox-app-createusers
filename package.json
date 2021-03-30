@@ -4,7 +4,7 @@
   "description": "createUsers form app ShaperBox",
   "main": "index.js",
   "scripts": {
-    "start":"node index.js",
+    "start": "node index.js",
     "test": "nodemon index.js"
   },
   "author": "alfaLabs",
