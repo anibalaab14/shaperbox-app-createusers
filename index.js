@@ -1,3 +1,4 @@
+const StatusCodes = require('http-status-codes');
 require('dotenv').config();
 require('./conectiondb.js');
 const Users = require('./models/users.js');
@@ -8,8 +9,8 @@ app.use(express.json());
 
 
 app.post('/shaperbox/v1/app-createUser', function (req, res) {
-    
-  const users = new Users ({
+
+  const users = new Users({
     name: req.body.name,
     lastname: req.body.lastname,
     username: req.body.username,
@@ -20,16 +21,19 @@ app.post('/shaperbox/v1/app-createUser', function (req, res) {
     age: req.body.age,
 
   });
-  users.save( (err,document) => {
-    if(err) {
+  users.save((err, document) => {
+    if (err) {
       console.log(err);
-      res.send({
-        status:"500"
+      return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+        statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
+        statusDescription: 'Internal Server Error'
       });
-    }else{
+
+
+    } else {
       console.log(document);
       res.send({
-        status:"200"
+        status: "200"
       });
     }
   });
