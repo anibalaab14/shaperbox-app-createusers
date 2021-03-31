@@ -24,9 +24,9 @@ app.post('/shaperbox/v1/app-createUser', function (req, res) {
   users.save((err, document) => {
     if (err) {
       console.log(err);
-      return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
-        statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
-        statusDescription: 'Internal Server Error'
+      return res.send({
+          statusCode: 500,
+          statusDescription: 'Internal Server Error' 
       });
 
 
